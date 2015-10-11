@@ -9,7 +9,8 @@ def hello_monkey():
     """Respond to incoming calls with a simple text message."""
  
     resp = twilio.twiml.Response()
-    resp.message("Hello, Mobile Monkey")
+    with resp.message("Hello, Mobile Monkey") as m:
+        m.media("https://demo.twilio.com/owl.png")
     return str(resp)
  
 if __name__ == "__main__":
