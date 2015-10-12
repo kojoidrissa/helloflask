@@ -13,7 +13,6 @@ callers = {
     "+12819281452": "Chanchan",
 }
 
- 
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
     """Respond & greet caller by name."""
@@ -26,6 +25,8 @@ def hello_monkey():
 
     resp = twilio.twiml.Response()
     resp.message(message)
+
+    return str(resp)
  
 if __name__ == "__main__":
     app.run(debug=True)
