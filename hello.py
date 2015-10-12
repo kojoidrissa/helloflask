@@ -1,4 +1,3 @@
-#coding: utf-8
 '''Should reply to an inbound text to my Twilio number w/
 customized response based on inbound number
 '''
@@ -10,7 +9,7 @@ app = Flask(__name__)
 
 # Try adding your own number to this list!
 callers = {
-    "+17137489037": "Kojo/殷可究",
+    "+17137489037": "Kojo",
     "+12818448757": "Makiko",
     "+12819281452": "Chanchan!",
 }
