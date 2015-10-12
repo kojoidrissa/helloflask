@@ -20,7 +20,7 @@ def hello_monkey():
     from_number = request.values.get('From', None)
     if from_number in callers:
         message = callers[from_number] + ", thanks for the following message! "
-         + str(request.values.get('Body', None))
+        + str(request.values.get('Body', None))
     else:
         message = "Monkey, thanks for the message!"
 
