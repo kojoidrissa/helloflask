@@ -29,7 +29,7 @@ def hello_monkey():
     #My construct to pull the values out of the request object
     data = [field for field in request.values]
 
-    return str(resp) #changed from (resp)
+    return str(request.values) #changed from (resp)
  
 if __name__ == "__main__":
     app.run(debug=True)
