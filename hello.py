@@ -1,4 +1,8 @@
-#Should reply to an inbound text to my Twilio number 
+#coding: utf-8
+'''Should reply to an inbound text to my Twilio number w/
+customized response based on inbound number
+'''
+
 from flask import Flask, request, redirect
 import twilio.twiml
  
