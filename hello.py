@@ -24,10 +24,7 @@ def hello_monkey():
         message = "Monkey, thanks for the message!"
 
     resp = twilio.twiml.Response()
-    #My construct to pull the values out of the request object
-    data = [key for key in request.values]
-    resp.message(data) #changed from (message)
-
+    resp.message(message)
 
     return str(resp) 
  
