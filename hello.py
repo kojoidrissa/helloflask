@@ -1,6 +1,5 @@
-'''Should reply to an inbound text to my Twilio number w/
-customized response based on inbound number
-'''
+#Should reply to an inbound text to my Twilio number w/
+#customized response based on inbound number
 
 from flask import Flask, request, redirect
 import twilio.twiml
@@ -11,7 +10,7 @@ app = Flask(__name__)
 callers = {
     "+17137489037": "Kojo",
     "+12818448757": "Makiko",
-    "+12819281452": "Chanchan!",
+    "+12819281452": "Chanchan",
 }
 
  
