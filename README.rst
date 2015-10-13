@@ -1,1 +1,1 @@
-My Twilio/Flask app for rolling various-sized die. Mostly for D&D.
+My Twilio/Flask/Heroku app for rolling various-sized die. Mostly for D&D.
