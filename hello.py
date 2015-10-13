@@ -9,9 +9,7 @@ app = Flask(__name__)
 # Try adding your own number to this list!
 # These other number won't work until I upgrade my account
 callers = {
-    "+17137489037": "Kojo",
-    "+12818448757": "Makiko",
-    "+12819281452": "Chanchan",
+    "+17135551212": "Kojo",
 }
 
 @app.route("/", methods=['GET', 'POST'])
@@ -21,9 +19,9 @@ def hello_monkey():
     from_number = request.values.get('From', None)
     sent_message = request.values.get('Body')
     if from_number in callers:
-        message = callers[from_number] + ", thanks for " + sent_message
+        message = callers[from_number] + ", thanks for: " + sent_message
     else:
-        message = "Monkey, thanks for sending me " + sent_message
+        message = "Caller, thanks for sending me: " + sent_message
 
     resp = twilio.twiml.Response()
     resp.message(message)
