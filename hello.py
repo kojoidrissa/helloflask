@@ -4,6 +4,8 @@
 from flask import Flask, request, redirect
 import twilio.twiml
 from re_match import input_valid
+from dice import Die
+
  
 app = Flask(__name__)
 
@@ -16,7 +18,22 @@ def hello_monkey():
  
     sent_message = request.values.get('Body')
     if input_valid(sent_message) != None:
-        message = "Your input: " + sent_message + " was valid"
+        param = sent_message.split('d')
+        sides = int(param[-1])
+        if param[0] = '':
+            rolls = 1
+        else:
+            rolls = int(param[0])
+        
+        newdie = Die(sides)
+        roll_total = 0
+        outcome = []
+        
+        for roll in range(0, rolls):
+            outcome.append(newdie.roll())
+        roll_total = sum(outcome)
+        message = "You rolled: " + outcome + " for a total of " + roll_total
+
     else:
         message = "Your input: " + sent_message + " was not valid."
 
