@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
-    """Respond & greet caller by name."""
+    """Respond with decision about validity of inbound message"""
  
     sent_message = request.values.get('Body')
     if input_valid(sent_message) != None:
