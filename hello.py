@@ -20,10 +20,10 @@ def hello_monkey():
     if input_valid(sent_message) != None:
         param = sent_message.split('d')
         sides = int(param[-1])
-        if param[0] = '':
-            rolls = 1
-        else:
+        if param[0] != '':
             rolls = int(param[0])
+        else:
+            rolls = 1
         
         newdie = Die(sides)
         roll_total = 0
