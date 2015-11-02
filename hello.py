@@ -3,39 +3,25 @@
 
 from flask import Flask, request, redirect
 import twilio.twiml
-from re_match import input_valid
-from dice import Die
-
  
 app = Flask(__name__)
 
 # Try adding your own number to this list!
 # These other number won't work until I upgrade my account
+callers = {
+    "+17135551212": "Kojo",
+}
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
-    """Respond with decision about validity of inbound message"""
+    """Respond & greet caller by name."""
  
+    from_number = request.values.get('From', None)
     sent_message = request.values.get('Body')
-    if input_valid(sent_message) != None:
-        param = sent_message.split('d')
-        sides = int(param[-1])
-        if param[0] != '':
-            rolls = int(param[0])
-        else:
-            rolls = 1
-        
-        newdie = Die(sides)
-        roll_total = 0
-        outcome = []
-        
-        for roll in range(0, rolls):
-            outcome.append(newdie.roll())
-        roll_total = sum(outcome)
-        message = "You rolled: " + outcome + " for a total of " + roll_total
-
+    if from_number in callers:
+        message = callers[from_number] + ", thanks for: " + sent_message
     else:
-        message = "Your input: " + sent_message + " was not valid."
+        message = "Caller, thanks for sending me: " + sent_message
 
     resp = twilio.twiml.Response()
     resp.message(message)
