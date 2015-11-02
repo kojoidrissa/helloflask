@@ -12,18 +12,18 @@ class Die():
         result = (rnd.randint(1, int(self.sides)))
         return result
 
-die_num = input("How many dice would you like to roll? ")
-die_sides = input("What sided die would you like to roll? ")
+# die_num = input("How many dice would you like to roll? ")
+# die_sides = input("What sided die would you like to roll? ")
 
-newdie = Die(die_sides)
-roll_total = 0
+# newdie = Die(die_sides)
+# roll_total = 0
 
-for i in range(0, int(die_num)):
-    outcome = newdie.roll()
-    print(outcome)
-    roll_total += outcome
+# for i in range(0, int(die_num)):
+#     outcome = newdie.roll()
+#     print(outcome)
+#     roll_total += outcome
 
-print ("Total", str(die_num)+"d"+str(die_sides), "=", roll_total)
+# print ("Total", str(die_num)+"d"+str(die_sides), "=", roll_total)
 
 # d20 = Die(20)
 # # print(d6.roll)
