@@ -8,11 +8,7 @@ def input_valid(s):
     ''' 
 
     result = re.match(r'^\d?\d?[d,D]\d?\d$', s)
-
-    if result == None:
-        print ("No Match")
-    else:
-        print ("Match found")
+    return result
 
 
 '''
