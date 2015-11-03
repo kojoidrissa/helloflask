@@ -23,7 +23,7 @@ def hello_monkey():
         #     rolls = int(param[0])
         # else:
         #     rolls = 1
-        message = param
+        message = str(param)
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
