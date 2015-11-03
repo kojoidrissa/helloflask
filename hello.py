@@ -20,7 +20,13 @@ def hello_monkey():
     if input_valid(sent_message) != None:
         message = "Thanks for: " + sent_message + " Your message is valid."
     else:
-        message = "Thanks for sending me: " + sent_message + " but, it's not valid."
+        message = sent_message + ''' is not a valid message. Use the
+        following format: xdy, where x and y are both numbers between 1 and 99.
+        The x value is optional. Valid Examples:
+        1d8
+        2d10
+        d6
+        '''
 
     resp = twilio.twiml.Response()
     resp.message(message)
