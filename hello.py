@@ -20,8 +20,7 @@ def hello_monkey():
     if input_valid(sent_message) != None:
         message = "Thanks for: " + sent_message + "Your message is valid."
     else:
-        message = "Caller, thanks for sending me: " + sent_message +
-        "Sadly, it's not valid."
+        message = "Thanks for sending me: " + sent_message + "but, it's not valid."
 
     resp = twilio.twiml.Response()
     resp.message(message)
