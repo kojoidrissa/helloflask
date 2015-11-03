@@ -18,7 +18,12 @@ def hello_monkey():
     from_number = request.values.get('From', None)
     sent_message = request.values.get('Body')
     if input_valid(sent_message) != None:
-        message = "Thanks for: " + sent_message + " Your message is valid."
+        param = sent_message.split('d')
+        if param[0] != '':
+            rolls = int(param[0])
+        else:
+            rolls = 1
+        message = "You want to roll : " + rolls + param[-1] + "-sided dice."
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
