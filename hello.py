@@ -27,10 +27,11 @@ def hello_monkey():
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
-        The x value is optional. Valid Examples:
+
+        Valid Examples:
         1d8
         2d10
-        d6
+        10d6
         '''
 
     resp = twilio.twiml.Response()
