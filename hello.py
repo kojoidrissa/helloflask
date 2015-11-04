@@ -19,11 +19,9 @@ def hello_monkey():
     sent_message = request.values.get('Body')
     if input_valid(sent_message) != None:
         param = sent_message.split('d')
-        # if str(param[0]) != '':
-        #     rolls = str(param[0])
-        # else:
-        #     rolls = 1
-        message =  "param: " + str(param) + ":*" + str(param[-1]) + "-sided Die: " 
+        rolls = str(param[0])
+        sides = str(param[-1])
+        message =  "You want to roll a : " + sides + "-sided die " + rolls + " times."
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
