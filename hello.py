@@ -23,7 +23,7 @@ def hello_monkey():
         #     rolls = int(param[0])
         # else:
         #     rolls = 1
-        message = "Rolls: " + str(param[0]) + "Die: " + str(param[-1])
+        message = "You want to roll : " + str(param[0]) + "-->" str(param[-1]) + "-sided Die: " 
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
