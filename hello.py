@@ -4,6 +4,7 @@
 from flask import Flask, request, redirect
 import twilio.twiml
 from re_match import input_valid
+from dice import Die
  
 app = Flask(__name__)
 
@@ -19,9 +20,11 @@ def hello_monkey():
     sent_message = request.values.get('Body')
     if input_valid(sent_message) != None:
         param = sent_message.split('d')
-        rolls = str(param[0])
-        sides = str(param[-1])
-        message =  "You want to roll a : " + sides + "-sided die " + rolls + " times."
+        rolls = int(param[0])
+        sides = int(param[-1])
+
+        newdie = Die(sides) 
+        message =  "You want to roll a : " + str(sides) + "-sided die " + str(rolls) + " times."
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
