@@ -29,7 +29,7 @@ def hello_monkey():
             results.append(newdie.roll())
         roll_total = sum(results)
 
-        message = str(results) + "\n" + str(roll_total)
+        message = sent_message + "\n" + str(results) + "\n" + str(roll_total)
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
