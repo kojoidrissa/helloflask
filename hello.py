@@ -26,7 +26,7 @@ def hello_monkey():
         newdie = Die(sides)
         results = []
         for roll in range(rolls):
-            results.append(roll)
+            results.append(newdie.roll())
         roll_total = sum(results)
 
         message = str(rolls) + "d" + str(sides) + "\n" + str(results) + str(roll_total)
