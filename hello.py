@@ -25,11 +25,11 @@ def hello_monkey():
 
         newdie = Die(sides)
         results = []
-        for roll in rolls:
+        for roll in range(1, rolls):
             results.append(newdie.roll())
         roll_total = sum(results)
 
-        message =  "You rolled : " + str(rolls) + "d" + str(sides) + "\n" + str(results) + str(total)
+        message = str(rolls) + "d" + str(sides) + "\n" + str(results) + str(total)
     else:
         message = sent_message + ''' is not a valid message. Use the
         following format: xdy, where x and y are both numbers between 1 and 99.
