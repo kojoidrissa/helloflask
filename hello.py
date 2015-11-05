@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
-    """Respond & greet caller by name."""
+    """Take a string describing a die roll, return the roll results"""
  
     from_number = request.values.get('From', None)
     sent_message = request.values.get('Body')
