@@ -25,7 +25,7 @@ def hello_monkey():
 
         newdie = Die(sides)
         results = []
-        for roll in range(1, rolls):
+        for roll in range(rolls):
             results.append(newdie.roll())
         roll_total = sum(results)
 
