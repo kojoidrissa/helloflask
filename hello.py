@@ -16,7 +16,7 @@ app = Flask(__name__)
 def hello_monkey():
     """Take a string describing a die roll, return the roll results"""
  
-    from_number = request.values.get('From', None)
+    # from_number = request.values.get('From', None)
     sent_message = request.values.get('Body')
     if input_valid(sent_message) != None:
         param = sent_message.split('d')
