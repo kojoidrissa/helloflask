@@ -8,10 +8,6 @@ from dice import Die
  
 app = Flask(__name__)
 
-# Try adding your own number to this list!
-# These other number won't work until I upgrade my account
-
-
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
     """Take a string describing a die roll, return the roll results"""
