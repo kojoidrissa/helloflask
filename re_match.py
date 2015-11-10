@@ -7,10 +7,8 @@ def input_valid(s):
         else: "No Match"
     ''' 
 
-    result = re.match(r'^\d?[1-9][d][1-9]\d?\d?$', s)
+    result = re.match(r'^(\d\d|[1-9]|[^0][^0])[d][1-9]\d?\d?$', s)
     return result
-
-
 '''
 test cases
 
@@ -23,6 +21,20 @@ iv('1d10')
 iv('10d10')
 
 '''
+
+def re_test(s):
+    result = re.match(r'^(\d\d|[1-9]|[^0][^0])$',s)
+    print result
+
+'''
+from re_match import re_test as rt
+
+rt('10') #should pass, does
+rt('01') #should pass, does
+rt('0') #should fail, does
+rt('00') #should fail, doesn't
+'''
+
 
 # roll_list = ['d8', 'd10', '1d8', '1d10', '10d10', '10d8', '2d100']
 
