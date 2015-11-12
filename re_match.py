@@ -7,7 +7,7 @@ def input_valid(s):
         else: "No Match"
     ''' 
 
-    result = re.match(r'^(\d\d|[1-9]|[^0][^0])[d][1-9]\d?\d?$', s)
+    result = re.match(r'^([^0][^0]|\d\d|[1-9])[d][1-9]\d?\d?$', s)
     return result
 '''
 test cases
