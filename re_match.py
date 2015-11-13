@@ -8,6 +8,14 @@ def input_valid(s):
     ''' 
 
     result = re.match(r'^([^0]\d|[^0])[d][1-9]\d?\d?$', s)
+    '''
+    I THINK changing the section AFTER the [d] to "[1-9][02]?[0]?" should
+    mean only 'normal' D&D dice + d100s can be rolled. But do I want to
+    lock it down like that?
+
+    Actually, the above logic is wrong. I may need another capture for that.
+    "([468]|[1][02]|[2][0]|[1][0][0])"
+    '''
     return result
 '''
 test cases
