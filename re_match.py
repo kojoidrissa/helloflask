@@ -7,7 +7,7 @@ def input_valid(s):
         else: "No Match"
     ''' 
 
-    result = re.match(r'^([^0]\d|[^0])[d][1-9]\d?\d?$', s)
+    result = re.match(r'^([^0]\d|[^0])[d][^0]\d?\d?$', s)
     '''
     I THINK changing the section AFTER the [d] to "[1-9][02]?[0]?" should
     mean only 'normal' D&D dice + d100s can be rolled. But do I want to
