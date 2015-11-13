@@ -14,11 +14,14 @@ test cases
 
 from re_match import input_valid as iv
 
-iv('0d8') #should fail
-iv('1d10') #should pass
-iv('99d8') #should pass
-iv('2d100') #should pass
-iv('00d10') #should fail
+print iv('0d8') #should fail
+print iv('1d10') #should pass
+print iv('99d8') #should pass
+print iv('2d100') #should pass
+print iv('00d10') #should fail
+print iv('10d0') #should fail
+print iv('10d01') #should fail
+print iv('10d00') #should fail
 
 '''
 
