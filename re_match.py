@@ -7,23 +7,23 @@ def input_valid(s):
         else: "No Match"
     ''' 
 
-    result = re.match(r'^([^0][^0]|\d\d|[1-9])[d][1-9]\d?\d?$', s)
+    result = re.match(r'^([^0]\d|[^0])[d][1-9]\d?\d?$', s)
     return result
 '''
 test cases
 
 from re_match import input_valid as iv
 
-iv('d8')
-iv('d10')
-iv('1d8')
-iv('1d10')
-iv('10d10')
+iv('0d8') #should fail
+iv('1d10') #should pass
+iv('99d8') #should pass
+iv('2d100') #should pass
+iv('00d10') #should fail
 
 '''
 
 def re_test(s):
-    result = re.match(r'^(\d\d|[1-9]|[^0][^0])$',s)
+    result = re.match(r'^([^0]\d|[^0])$',s)
     print result
 
 '''
