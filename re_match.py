@@ -34,7 +34,7 @@ print iv('10d00') #should fail
 '''
 
 def re_test(s):
-    result = re.match(r'^([^0]\d|[^0])$',s)
+    result = re.match(r'^([^0]\d|[^0])[d]([468]|[1][02]|[2][0]|[1][0][0])$',s)
     print result
 
 '''
