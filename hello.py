@@ -8,6 +8,7 @@ from dice import Die
  
 app = Flask(__name__)
 
+#Need to understand this better
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
     """Take a string describing a die roll, return the roll results"""
