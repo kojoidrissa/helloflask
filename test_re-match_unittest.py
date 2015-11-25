@@ -13,13 +13,16 @@ class TestRE_match(unittest.TestCase):
         pass
 
     def test_leading_single_0(self):
-        self.assertEqual( input_valid('0d8'), None)
+        self.assertIsNone(input_valid('0d8'))
 
     def test_trailing_single_0(self):
-        self.assertEqual( input_valid('10d0'), None)
+        self.assertIsNone( input_valid('10d0'))
 
     def test_trailing_0(self):
-        self.assertEqual(input_valid('10d01'), None)
+        self.assertIsNone(input_valid('10d01'))
+
+    def test_valid_leading_single_0(self):
+        self.assertIsNotNone (input_valid('10d8'))
 
 if __name__ == '__main__':
     unittest.main()
