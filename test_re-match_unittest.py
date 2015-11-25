@@ -7,16 +7,19 @@ To run test:
 import unittest
 from re_match import input_valid
 
-class TestUM(unittest.TestCase):
+class TestRE_match(unittest.TestCase):
 
     def setUp(self):
         pass
 
-    def test_numbers_3_4(self):
-        self.assertEqual( multiply(3,4), 12)
+    def test_leading_single_0(self):
+        self.assertEqual( input_valid('0d8'), None)
 
-    def test_strings_a_3(self):
-        self.assertEqual( multiply('a',3), 'aaa')
+    def test_trailing_single_0(self):
+        self.assertEqual( input_valid('10d0'), None)
+
+    def test_trailing_0(self):
+        self.assertEqual(input_valid('10d01'), None)
 
 if __name__ == '__main__':
     unittest.main()
