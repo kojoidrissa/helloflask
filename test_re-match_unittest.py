@@ -7,7 +7,7 @@ To run test:
 import unittest
 from re_match import input_valid
 
-class TestRE_match(unittest.TestCase):
+class TestRe_Match(unittest.TestCase):
 
     def setUp(self):
         pass
