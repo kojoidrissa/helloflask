@@ -21,3 +21,5 @@ TESTING
 I'm using the Python Testing `unittest tutorial <http://pythontesting.net/framework/unittest/unittest-introduction/>`_ and I'm having trouble getting the "python -m unittest discover simple_example"  to work.
 
 `python test_rematch_unittest.py -v` works fine, as does `python -m unittest -v test_rematch_unittest` but the `python -m unittest discover` option WAS returning "0 tests run". But, now `python -m unittest discover . -v` is working. So, okay.
+
+Turns out, it was a hyphen in the filename. If the testfile is `test_re-match_unittest.py`, the `python -m unittest discover . -v` doesn't work. Removing the hypen makes it work just fine.
