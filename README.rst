@@ -22,4 +22,10 @@ I'm using the Python Testing `unittest tutorial <http://pythontesting.net/framew
 
 `python test_rematch_unittest.py -v` works fine, as does `python -m unittest -v test_rematch_unittest` but the `python -m unittest discover` option WAS returning "0 tests run". But, now `python -m unittest discover . -v` is working. So, okay.
 
-Turns out, it was a hyphen in the filename. If the testfile is `test_re-match_unittest.py`, the `python -m unittest discover . -v` doesn't work. Removing the hypen makes it work just fine.
+Turns out, it was a hyphen in the filename. If the testfile is `test_re-match_unittest.py`, the `python -m unittest discover . -v` doesn't work. Removing the hyphen makes it work just fine.
+
+NOTES/REFERENCE
+----------------
+-  `Twilio Python Quickstart Tutorial <https://www.twilio.com/docs/quickstart/python/sms/replying-to-sms-messages>`_: This is the code base I started from.
+-  `Heroku Getting Started with Python docs <https://devcenter.heroku.com/articles/getting-started-with-python-o#running-a-worker>`_ This is what I used, even though Heroku suggests you look at their `new Python docs <https://devcenter.heroku.com/articles/getting-started-with-python#introduction>`_
+-  `Heroku Command Line <https://devcenter.heroku.com/categories/command-line>`_ docs
