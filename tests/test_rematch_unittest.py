@@ -1,7 +1,12 @@
 '''
 To run test:
-    python test_re-match_unittest.py
-    python test_re-match_unittest.py -v
+    From local directory
+        python test_re-match_unittest.py
+        python test_re-match_unittest.py -v
+
+    From top directory (w/ discovery)
+        python -m unittest discover -v tests/
+    
 '''
 
 import unittest

@@ -17,8 +17,13 @@ def input_valid(s):
     "([468]|[1][02]|[2][0]|[1][0][0])"
     '''
     return result
+
+#######################################
+# Beyond This point, lies MADNESS!!
+#######################################
+
 '''
-test cases
+manual test cases: NOT The Way!
 
 from re_match import input_valid as iv
 
@@ -38,6 +43,7 @@ def re_test(s):
     print (result)
 
 '''
+MORE manual testing. Again, NOT THE WAY!!
 from re_match import re_test as rt
 
 rt('10') #should pass, does
