@@ -1,8 +1,8 @@
 '''
 To run test:
     From local directory
-        python test_re-match_unittest.py
-        python test_re-match_unittest.py -v
+        python test_rematch_unittest.py
+        python test_rematch_unittest.py -v
 
     From top directory (w/ discovery)
         python -m unittest discover -v tests/

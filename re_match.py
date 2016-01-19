@@ -1,5 +1,7 @@
 import re
 
+""" to run doctest: python -m doctest -v {filename}"""
+
 def input_valid(s):
     '''
     str --> str
