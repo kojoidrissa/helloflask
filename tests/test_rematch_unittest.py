@@ -11,8 +11,7 @@ To run test:
 
 import unittest
 from re_match import input_valid
-from dice import Die
-import random as rnd
+
 
 class TestRe_Match(unittest.TestCase):
 
@@ -33,11 +32,6 @@ class TestRe_Match(unittest.TestCase):
 
     def tearDown(self):
         pass
-
-class TestDie(unittest.TestCase):
-    def test_die_roll_in_range(self):
-        die = Die(rnd.randint(1,100)) 
-        self.assertIn(die.roll(), range(1, die.sides))
 
 if __name__ == '__main__':
     unittest.main()
