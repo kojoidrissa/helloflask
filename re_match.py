@@ -5,6 +5,18 @@ def input_valid(s):
     str --> str
         if re.match: "Match found"
         else: "No Match"
+    
+    >>> from re_match import input_valid as iv
+    >>> print iv('0d8')
+    None
+    >>> print iv('00d10')
+    None
+    >>> print iv('10d0')
+    None
+    >>> print iv('10d01')
+    None
+    >>> print iv('10d00')
+    None
     ''' 
 
     result = re.match(r'^([^0]\d|[^0])[d][^0]\d?\d?$', s)
