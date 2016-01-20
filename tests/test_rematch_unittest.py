@@ -25,7 +25,7 @@ class TestRe_Match(unittest.TestCase):
         self.assertIsNone( input_valid('10d0'))
 
     def test_trailing_0(self):
-        self.assertIsNone(input_valid('10d01'))
+        self.assertIsNone(input_valid('10d08'))
 
     def test_valid_leading_single_0(self):
         self.assertIsNotNone (input_valid('10d8'))

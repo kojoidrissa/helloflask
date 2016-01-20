@@ -19,6 +19,8 @@ def input_valid(s):
     None
     >>> print iv('10d00')
     None
+    >>> print iv('2d100') is None
+    False
     ''' 
 
     result = re.match(r'^([^0]\d|[^0])[d][^0]\d?\d?$', s)
