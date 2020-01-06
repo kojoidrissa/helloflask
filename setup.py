@@ -14,7 +14,7 @@ setup(
     'pytz==2015.6',
     'six==1.10.0',
     'twilio==4.6.0',
-    'Werkzeug==0.10.4',
+    'Werkzeug==0.15.3',
     'wheel==0.24.0'
     ],
     test_suite = 'tests'
