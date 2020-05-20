@@ -6,7 +6,7 @@ setup(
     install_requires = [
     'Flask>=0.12.3',
     'gunicorn>=19.5.0',
-    'httplib2==0.9.2',
+    'httplib2==0.18.0',
     'itsdangerous==0.24',
     'Jinja2>=2.10.1',
     'MarkupSafe==0.23',
