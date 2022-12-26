@@ -15,7 +15,7 @@ setup(
     'six==1.10.0',
     'twilio==4.6.0',
     'Werkzeug==0.10.4',
-    'wheel==0.24.0'
+    'wheel==0.38.1'
     ],
     test_suite = 'tests'
     )
